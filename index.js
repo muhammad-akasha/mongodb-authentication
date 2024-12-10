@@ -7,6 +7,7 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import connectDB from "./src/db/index.js";
 import userRoutes from "./src/routes/user.routes.js";
+import blogRoutes from "./src/routes/blog.routes.js";
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.get("/", (req, res) => {
 
 // routes
 app.use("/api/v1", userRoutes);
+app.use("/api/v1", blogRoutes);
 
 connectDB()
   .then(() => {

@@ -159,4 +159,11 @@ const uploadImage = async (req, res) => {
   }
 };
 
-export { registerUser, loginUser, logoutUser, refreshToken, uploadImage };
+export {
+  registerUser,
+  loginUser,
+  logoutUser,
+  refreshToken,
+  uploadImage,
+  uploadImageToCloudinary,
+};

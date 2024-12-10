@@ -24,6 +24,12 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: [true, "Picture is required"],
     },
+    blogIds: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Blogs", // Reference to the Blogs model
+      },
+    ],
   },
   {
     timestamps: true,
